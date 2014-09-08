@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>jackal_gazebo</name>
+  <version>0.0.0</version>
+  <description>Launchfiles to use Jackal in Gazebo.</description>
+
+  <maintainer email="mpurvis@clearpathrobotics.com">Mike Purvis</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://wiki.ros.org/jackal_gazebo</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>jackal_control</run_depend>
+  <run_depend>jackal_description</run_depend>
+
+  <export></export>
+</package>
