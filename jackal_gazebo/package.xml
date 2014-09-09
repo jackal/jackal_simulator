@@ -18,5 +18,7 @@
   <run_depend>jackal_control</run_depend>
   <run_depend>jackal_description</run_depend>
 
-  <export></export>
+  <export>
+    <gazebo_ros gazebo_media_path="${prefix}"/>
+  </export>
 </package>
