@@ -7,6 +7,6 @@ catkin_package()
 
 roslaunch_add_file_check(launch/jackal_world.launch)
 
-install(DIRECTORY launch
+install(DIRECTORY launch Media worlds
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
