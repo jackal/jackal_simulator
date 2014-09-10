@@ -2,6 +2,11 @@
 Changelog for package jackal_simulator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.2 (2014-09-10)
+------------------
+* Add author tags.
+* Contributors: Mike Purvis
+
 0.2.1 (2014-09-10)
 ------------------
 

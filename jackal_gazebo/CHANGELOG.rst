@@ -2,6 +2,12 @@
 Changelog for package jackal_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.2 (2014-09-10)
+------------------
+* Add author tags.
+* Added launch arg to enable front-facing laser.
+* Contributors: Mike Purvis
+
 0.2.1 (2014-09-10)
 ------------------
 * Install all directories.
