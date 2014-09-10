@@ -5,6 +5,7 @@
   <description>Packages for simulating Jackal.</description>
 
   <maintainer email="mpurvis@clearpathrobotics.com">Mike Purvis</maintainer>
+  <author>Mike Purvis</author>
 
   <license>BSD</license>
 
