@@ -2,6 +2,11 @@
 Changelog for package jackal_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.1 (2014-09-10)
+------------------
+* Install all directories.
+* Contributors: Mike Purvis
+
 0.2.0 (2014-09-09)
 ------------------
 * Default world for Jackal sim is now a green one.
