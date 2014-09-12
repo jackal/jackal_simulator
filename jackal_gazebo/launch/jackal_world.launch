@@ -21,6 +21,7 @@
   <include file="$(find jackal_description)/launch/description.launch">
     <arg name="accessories" value="true" />
     <arg name="front_laser" value="$(arg front_laser)" />
+    <arg name="gazebo_plugin" value="$(arg gazebo_plugin)"/>
   </include>
 
   <!-- Load Jackal's controllers -->
