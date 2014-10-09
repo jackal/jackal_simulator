@@ -25,9 +25,11 @@
 
   <!-- Load Jackal's controllers -->
   <include file="$(find jackal_control)/launch/control.launch" />
-
+  
   <!-- Load Jackal's teleop nodes -->
-  <include file="$(find jackal_control)/launch/teleop.launch" />
+  <include file="$(find jackal_control)/launch/teleop.launch">
+    <arg name="joystick" value="false"/>
+  </include>
 
   <!-- Spawn Jackal -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
