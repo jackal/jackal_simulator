@@ -2,8 +2,8 @@
 Changelog for package jackal_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.3 (2014-12-12)
+------------------
 * Added jackal_race world.
 * Add hector_gazebo_plugins dependency.
 * Contributors: Mike Purvis, spourmehr
