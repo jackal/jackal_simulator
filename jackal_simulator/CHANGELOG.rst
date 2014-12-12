@@ -2,6 +2,9 @@
 Changelog for package jackal_simulator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.2.2 (2014-09-10)
 ------------------
 * Add author tags.
