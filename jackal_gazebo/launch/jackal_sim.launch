@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Jackal accessories which may be simulated. Pass true to enable. -->
+  <arg name="front_laser" default="false" />
+
+  <!-- Considerations for multirobot launches. If you're running a single robot, don't touch this. If you're running 
+       multiple robots, touch all of them -->
+  <arg name="tf_prefix" default=""/>
+  <arg name="robot_name" default="jackal"/>
+  <arg name="multirobot" default="false"/>
+
+  <!-- Starting location of robot -->
+  <arg name="x_0" default="0.0"/>
+  <arg name="y_0" default="0.0"/>
+
+  <param name="tf_prefix" value="$(arg tf_prefix)"/>
+  <!-- Load Jackal's description into the Parameter Server -->
+  <include file="$(find jackal_description)/launch/description.launch">
+    <arg name="accessories" value="true" />
+    <arg name="front_laser" value="$(arg front_laser)" />
+  </include>
+
+  <!-- Load Jackal's controllers -->
+  <include file="$(find jackal_control)/launch/control.launch">
+    <arg name="tf_prefix" value="/$(arg tf_prefix)/" if="$(arg multirobot)"/>
+  </include>
+  
+  <!-- Load Jackal's teleop nodes -->
+  <include file="$(find jackal_control)/launch/teleop.launch">
+    <arg name="joystick" value="false"/>
+  </include>
+
+  <!-- Spawn Jackal -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+    args="-urdf -model $(arg robot_name) -param robot_description -x $(arg x_0) -y $(arg y_0) -z 1.0"/>
+</launch>

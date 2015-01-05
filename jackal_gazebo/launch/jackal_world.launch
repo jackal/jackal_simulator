@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <launch>
   <!-- these are the arguments you can pass this launch file, for example paused:=true -->
   <arg name="use_sim_time" default="true" />
@@ -17,21 +18,8 @@
     <arg name="world_name" value="$(arg world_name)" />
   </include>
 
-  <!-- Load Jackal's description into the Parameter Server -->
-  <include file="$(find jackal_description)/launch/description.launch">
-    <arg name="accessories" value="true" />
-    <arg name="front_laser" value="$(arg front_laser)" />
+  <include file="$(find jackal_gazebo)/launch/jackal_sim.launch">
+    <arg name="front_laser" value="$(arg front_laser)"/>
   </include>
 
-  <!-- Load Jackal's controllers -->
-  <include file="$(find jackal_control)/launch/control.launch" />
-  
-  <!-- Load Jackal's teleop nodes -->
-  <include file="$(find jackal_control)/launch/teleop.launch">
-    <arg name="joystick" value="false"/>
-  </include>
-
-  <!-- Spawn Jackal -->
-  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
-	      args="-urdf -model jackal -param robot_description -x 0 -y 0 -z 1.0" />
 </launch>
