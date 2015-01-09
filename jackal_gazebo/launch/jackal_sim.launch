@@ -28,6 +28,7 @@
   <!-- Load Jackal's teleop nodes -->
   <include file="$(find jackal_control)/launch/teleop.launch">
     <arg name="joystick" value="false"/>
+    <arg name="tf_prefix" value="/$(arg tf_prefix)/" if="$(arg multirobot)"/>
   </include>
 
   <!-- Spawn Jackal -->
