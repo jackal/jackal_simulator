@@ -17,8 +17,8 @@
   <run_depend>gazebo_ros_control</run_depend>
   <run_depend>gazebo_plugins</run_depend>
   <run_depend>hector_gazebo_plugins</run_depend>
-  <run_depend>jackal_control</run_depend>
-  <run_depend>jackal_description</run_depend>
+  <run_depend version_gte="0.5">jackal_control</run_depend>
+  <run_depend version_gte="0.5">jackal_description</run_depend>
 
   <export>
     <gazebo_ros gazebo_media_path="${prefix}"/>
