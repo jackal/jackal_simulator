@@ -2,8 +2,8 @@
 Changelog for package jackal_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.0 (2015-01-20)
+------------------
 * Add small hack to continue supporting the front_laser:=true arg, since that was prominently documented.
 * Change from individual accessory args to a single "config" arg.
 * Contributors: Mike Purvis
