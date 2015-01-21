@@ -2,6 +2,12 @@
 Changelog for package jackal_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add small hack to continue supporting the front_laser:=true arg, since that was prominently documented.
+* Change from individual accessory args to a single "config" arg.
+* Contributors: Mike Purvis
+
 0.2.3 (2014-12-12)
 ------------------
 * Added jackal_race world.
