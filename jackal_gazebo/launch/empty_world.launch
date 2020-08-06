@@ -16,7 +16,7 @@
   <arg name="config" default="$(arg default_config)" />
 
   <!-- Optionally enable teleop for the simulation -->
-  <arg name="joystick" default="false" />
+  <arg name="joystick" default="true" />
 
   <!-- Launch Gazebo with the specified world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -32,6 +32,7 @@
     <arg name="x" value="0" />
     <arg name="y" value="0" />
     <arg name="z" value="1.0" />
+    <arg name="yaw" value="0" />
     <arg name="config" value="$(arg config)" />
     <arg name="joystick" value="$(arg joystick)" />
   </include>
