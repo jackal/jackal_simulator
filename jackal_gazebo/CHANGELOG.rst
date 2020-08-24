@@ -2,6 +2,14 @@
 Changelog for package jackal_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Enable the joystick by default. Add yaw to the spawn_jackal launch file
+* Add an additional parameter to enable teleop in the simulations
+* Cherry-pick from recent melodic updates
+* Moved spawning into a specific launch, so this is more portable to other packages
+* Contributors: Chris Iverach-Brereton, Dave Niewinski
+
 0.3.0 (2015-01-20)
 ------------------
 * Add small hack to continue supporting the front_laser:=true arg, since that was prominently documented.
