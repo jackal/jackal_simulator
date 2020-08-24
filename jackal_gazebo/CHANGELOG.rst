@@ -2,8 +2,8 @@
 Changelog for package jackal_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.1 (2020-08-24)
+------------------
 * Enable the joystick by default. Add yaw to the spawn_jackal launch file
 * Add an additional parameter to enable teleop in the simulations
 * Cherry-pick from recent melodic updates
