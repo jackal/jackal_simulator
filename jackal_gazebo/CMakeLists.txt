@@ -1,12 +1,23 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(jackal_gazebo)
 
-find_package(catkin REQUIRED COMPONENTS roslaunch)
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
 
-catkin_package()
+find_package(ament_cmake REQUIRED)
+find_package(urdf REQUIRED)
+find_package(xacro REQUIRED)
 
-roslaunch_add_file_check(launch/jackal_world.launch)
-
-install(DIRECTORY launch Media worlds
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+install(
+  DIRECTORY
+    launch worlds
+  DESTINATION
+    share/${PROJECT_NAME}
 )
+
+ament_package()
