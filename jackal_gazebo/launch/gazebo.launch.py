@@ -1,8 +1,8 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, RegisterEventHandler, SetEnvironmentVariable
-from launch.event_handlers import OnProcessExit
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, SetEnvironmentVariable
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution, EnvironmentVariable
+from launch.substitutions import EnvironmentVariable, FindExecutable, LaunchConfiguration, PathJoinSubstitution
+
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
@@ -17,7 +17,7 @@ ARGUMENTS = [
 
 
 def generate_launch_description():
-    
+
     gz_resource_path = SetEnvironmentVariable(name='GAZEBO_MODEL_PATH', value=[
                                                 EnvironmentVariable('GAZEBO_MODEL_PATH',
                                                                     default_value=''),
@@ -73,7 +73,6 @@ def generate_launch_description():
     gzclient = ExecuteProcess(
         cmd=['gzclient'],
         output='screen',
-        # condition=IfCondition(LaunchConfiguration('gui')),
     )
 
     # Spawn robot
@@ -88,12 +87,13 @@ def generate_launch_description():
         output='screen',
     )
 
-    # Launch jackal_control/control.launch.py which is just robot_localization.
+    # Launch jackal_control/control.launch.py
     launch_jackal_control = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(PathJoinSubstitution(
                 [FindPackageShare('jackal_control'), 'launch', 'control.launch.py']
             )),
-            launch_arguments=[('robot_description_command', robot_description_command)]
+            launch_arguments=[('robot_description_command', robot_description_command),
+                              ('is_sim', 'True')]
         )
 
     # Launch jackal_control/teleop_base.launch.py which is various ways to tele-op
