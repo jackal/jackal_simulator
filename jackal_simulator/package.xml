@@ -1,18 +1,22 @@
 <?xml version="1.0"?>
-<package>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>jackal_simulator</name>
   <version>0.4.0</version>
   <description>Packages for simulating Jackal.</description>
 
-  <maintainer email="mpurvis@clearpathrobotics.com">Mike Purvis</maintainer>
-  <author>Mike Purvis</author>
+  <author email="mpurvis@clearpathrobotics.com">Mike Purvis</author>
+
+  <maintainer email="tbaltovski@clearpathrobotics.com">Tony Baltovski</maintainer>
+  <maintainer email="rkreinin@clearpathrobotics.com">Roni Kreinin</maintainer>
 
   <license>BSD</license>
 
-  <url type="website">http://wiki.ros.org/jackal_simulator</url>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <buildtool_depend>catkin</buildtool_depend>
-  <run_depend version_gte="0.3">jackal_gazebo</run_depend>
+  <exec_depend>jackal_gazebo</exec_depend>
 
-  <export><metapackage/></export>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
