@@ -2,6 +2,11 @@
 Changelog for package jackal_simulator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Working gazebo
+* Contributors: Roni Kreinin
+
 0.4.0 (2020-08-24)
 ------------------
 
