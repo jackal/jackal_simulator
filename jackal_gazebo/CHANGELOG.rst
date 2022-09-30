@@ -2,8 +2,8 @@
 Changelog for package jackal_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.0 (2022-09-30)
+------------------
 * Cleanup
 * Working gazebo
 * Contributors: Roni Kreinin
